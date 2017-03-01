@@ -1,0 +1,13 @@
+SELECT * FROM customers;
+SELECT DISTINCT country FROM customers;
+SELECT * FROM customers WHERE CustomerID LIKE 'BL%';
+SELECT * FROM orders LIMIT 100;
+SELECT * FROM customers WHERE PostalCode IN (1010, 3012, 12209, 05023);
+SELECT * FROM orders WHERE ShipRegion IS NOT NULL;
+SELECT * FROM customers ORDER BY Country, City;
+INSERT INTO customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax) VALUES ('dsesad', 'kjoljoijosj', 'kjdojdojojo', 'kljoljol', 'ijhjoj', 'kljo', 'joijo', 'oihjoj', 'pkpp', 'kol', 'kjo');
+UPDATE orders SET ShipRegion = 'EuroZone' WHERE ShipCountry = 'France';
+DELETE FROM `order details` WHERE Quantity = 1;
+SELECT AVG(Quantity), MAX(Quantity), MIN(Quantity) FROM `order details`;
+SELECT AVG(Quantity), MAX(Quantity), MIN(Quantity) FROM `order details` group by OrderID;
+SELECT * FROM orders WHERE OrderID = 10290;
